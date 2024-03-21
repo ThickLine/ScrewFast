@@ -3,8 +3,9 @@
 import Meta from "../components/Meta.astro";
 import Navbar from "../components/sections/Navbar.astro";
 import FooterSection from "../components/sections/FooterSection.astro";
+import CookieConsent from "../components/CookieConsent.astro";
 
-// Setting expected props 
+// Setting expected props
 const { title = "ScrewFast", meta, structuredData } = Astro.props;
 
 // Interface to type-check the properties
@@ -13,13 +14,14 @@ interface Props {
   meta?: string;
   structuredData?: object;
 }
+const currentLocale = Astro.currentLocale;
 ---
 
 <!--
 This is the main structure for the page.
 We set the language of the page to English and add classes for scrollbar and scroll behavior.
 -->
-<html lang="en" class="scrollbar-hide scroll-pt-16">
+<html lang={currentLocale} class="scrollbar-hide scroll-pt-16">
   <head>
     <!-- Adding metadata to the HTML document -->
     <Meta meta={meta} structuredData={structuredData} />
@@ -63,6 +65,7 @@ We set the language of the page to English and add classes for scrollbar and scr
       <slot />
       </main>
     </div>
+    <CookieConsent />
     <FooterSection />
     <style>
       /* CSS rules for the page scrollbar and scrolling experience with lenis library */

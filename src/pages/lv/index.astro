@@ -1,15 +1,15 @@
 ---
 // Import the necessary components
-import MainLayout from "../layouts/MainLayout.astro";
-import HeroSection from "../components/sections/landing/HeroSection.astro";
-import HeroSectionAlt from "../components/sections/landing/HeroSectionAlt.astro";
-import ClientsSection from "../components/sections/landing/ClientsSection.astro";
-import FeaturesGeneral from "../components/sections/features/FeaturesGeneral.astro";
-import FeaturesNavs from "../components/sections/features/FeaturesNavs.astro";
-import TestimonialsSection from "../components/sections/testimonials/TestimonialsSection.astro";
-import PricingSection from "../components/sections/pricing/PricingSection.astro";
-import FAQ from "../components/sections/FAQ.astro";
-import AnnouncementBanner from "../components/ui/banners/AnnouncementBanner.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import HeroSection from "../../components/sections/landing/HeroSection.astro";
+import HeroSectionAlt from "../../components/sections/landing/HeroSectionAlt.astro";
+import ClientsSection from "../../components/sections/landing/ClientsSection.astro";
+import FeaturesGeneral from "../../components/sections/features/FeaturesGeneral.astro";
+import FeaturesNavs from "../../components/sections/features/FeaturesNavs.astro";
+import TestimonialsSection from "../../components/sections/testimonials/TestimonialsSection.astro";
+import PricingSection from "../../components/sections/pricing/PricingSection.astro";
+import FAQ from "../../components/sections/FAQ.astro";
+import AnnouncementBanner from "../../components/ui/banners/AnnouncementBanner.astro";
 
 const avatarSrcs: Array<string> = [
   "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
@@ -27,23 +27,23 @@ const avatarSrcs: Array<string> = [
   />
 
   <HeroSection
-    title=`Equip Your Projects with <span
-        class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>`
-    subTitle="Top-quality hardware tools and expert construction services for every project need."
-    primaryBtn="Start Exploring"
-    primaryBtnURL="/products"
-    secondaryBtn="Contact Sales Team"
-    secondaryBtnURL="/contact"
-    withReview={true}
-    avatars={avatarSrcs}
-    rating=`<span class="font-bold">4.8</span> / 5`
-    starCount={4}
-    reviews=`From Over <span class="font-bold">12.8k</span> Reviews`
+  title=`Aprīkojiet Savus Projektus ar <span
+  class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>`
+subTitle="Augstas kvalitātes darbarīki un ekspertu būvniecības pakalpojumi katram projekta vajadzībai."
+primaryBtn="Sākt Iepazīšanos"
+primaryBtnURL="/products"
+secondaryBtn="Sazināties ar Pārdošanas Komandu"
+secondaryBtnURL="/contact"
+withReview={true}
+avatars={avatarSrcs}
+rating=`<span class="font-bold">4.8</span> no 5`
+starCount={4}
+reviews=`No Vairāk Kā <span class="font-bold">12.8k</span> Atsauksmēm`
   />
 
   <ClientsSection
-    title="Trusted by Industry Leaders"
-    subTitle="Experience the reliability chosen by industry giants."
+  title="Uzticams Industrijas Līderiem"
+  subTitle="Pieredzējiet uzticamību, ko izvēlējušies industrijas giganti."
   />
 
   <FeaturesGeneral />
@@ -51,8 +51,8 @@ const avatarSrcs: Array<string> = [
   <FeaturesNavs />
 
   <TestimonialsSection
-    title="Fast-Track Your Projects"
-    subTitle="At ScrewFast, we ensure a swift start with instant account setup. Experience the speed of construction redefined."
+  title="Paātriniet Savus Projektus"
+  subTitle="Ar ScrewFast, mēs nodrošinām ātru sākumu ar nekavējošu konta iestatīšanu. Piedzīvojiet būvniecības ātruma pārdefinēšanu."
     ;
     testimonials={[
       {

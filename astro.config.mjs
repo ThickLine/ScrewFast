@@ -5,8 +5,16 @@ import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
 
+import cookieconsent from "@jop-software/astro-cookieconsent";
+import jopSoftwarecookieconsent from "@jop-software/astro-cookieconsent";
+
 // https://astro.build/config
 export default defineConfig({
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "lv"],
+    prefixDefaultLocale: false,
+  },
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
   site: "https://screwfast.uk",
   image: {
@@ -18,34 +26,41 @@ export default defineConfig({
     sitemap(),
     starlight({
       title: "ScrewFast Docs",
-      defaultLocale: "en",
+      defaultLocale: "lv",
       locales: {
         en: {
           label: "English",
+          lang: "en",
         },
-        de: { label: "Deutsch", lang: "de" },
-        es: { label: "Español", lang: "es" },
-        fa: { label: "Persian", lang: "fa", dir: "rtl" },
-        fr: { label: "Français", lang: "fr" },
-        ja: { label: "日本語", lang: "ja" },
-        "zh-cn": { label: "简体中文", lang: "zh-CN" },
+        lv: {
+          label: "Latviešu",
+          lang: "lv",
+        },
       },
       sidebar: [
         {
           label: "Quick Start Guides",
-          autogenerate: { directory: "guides" },
+          autogenerate: {
+            directory: "guides",
+          },
         },
         {
           label: "Tools & Equipment",
-          autogenerate: { directory: "tools" },
+          autogenerate: {
+            directory: "tools",
+          },
         },
         {
           label: "Construction Services",
-          autogenerate: { directory: "construction" },
+          autogenerate: {
+            directory: "construction",
+          },
         },
         {
           label: "Advanced Topics",
-          autogenerate: { directory: "advanced" },
+          autogenerate: {
+            directory: "advanced",
+          },
         },
       ],
       social: {
@@ -61,6 +76,24 @@ export default defineConfig({
     compressor({
       gzip: false,
       brotli: true,
+    }),
+    jopSoftwarecookieconsent(),
+    cookieconsent({
+      guiOptions: {
+        consentModal: {
+          layout: "cloud",
+          position: "bottom center",
+          equalWeightButtons: true,
+          flipButtons: false,
+        },
+        preferencesModal: {
+          layout: "box",
+          position: "right",
+          equalWeightButtons: true,
+          flipButtons: false,
+        },
+      },
+      // ...
     }),
   ],
   output: "static",

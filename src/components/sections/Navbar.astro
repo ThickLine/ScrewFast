@@ -4,6 +4,7 @@ import ThemeIcon from "../ThemeIcon.astro";
 import NavLink from "../ui/links/NavLink.astro";
 import Authentication from "./Authentication.astro";
 import { navBarLinks } from "../../utils/navigation.ts";
+import LocaleSwitcher from '../../components/LocaleSwitcher.astro';
 ---
 
 <!-- Main header component -->
@@ -120,6 +121,9 @@ import { navBarLinks } from "../../utils/navigation.ts";
       <span class="inline-block md:hidden">
         <ThemeIcon />
       </span>
+      <span class="inline-block md:hidden">
+        <LocaleSwitcher />
+      </span>
     </div>
     <!-- Contains navigation links -->
     <div
@@ -139,6 +143,9 @@ import { navBarLinks } from "../../utils/navigation.ts";
         <!-- ThemeIcon component specifically for larger screens -->
         <span class="hidden md:inline-block">
           <ThemeIcon />
+        </span>
+        <span class="hidden md:inline-block">
+          <LocaleSwitcher />
         </span>
       </div>
     </div>

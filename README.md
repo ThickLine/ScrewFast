@@ -7,46 +7,52 @@ ScrewFast is an open-source template designed for quick and efficient web projec
 **[View Live Demo](https://screwfast.uk)**
 
 ## Table of Contents
-  * [Why Choose ScrewFast?](#why-choose-screwfast)
-  * [Features](#features)
-  * [What's New](#whats-new)
-  * [Getting Started](#getting-started)
-    + [Installation](#installation)
-    + [Development Commands](#development-commands)
-  * [Deployment](#deployment)
-    + [Building Your Site](#building-your-site)
-    + [Deploying to Vercel](#deploying-to-vercel)
-  * [Project Structure](#project-structure)
-  * [Static Assets and Public Resources](#static-assets-and-public-resources)
-  * [Customization](#customization)
-    + [Editing Component Variables](#editing-component-variables)
-    + [Props in Component Instances](#props-in-component-instances)
-    + [Customizing Navigation and Footer Links](#customizing-navigation-and-footer-links)
+- [Versatile Landing, Blog \& Docs Template for a Simplified Web Presence](#versatile-landing-blog--docs-template-for-a-simplified-web-presence)
+  - [Table of Contents](#table-of-contents)
+  - [Why Choose ScrewFast?](#why-choose-screwfast)
+  - [Features](#features)
+  - [What's New](#whats-new)
+    - [Added Features](#added-features)
+    - [Planned Improvements](#planned-improvements)
+    - [Bug Fixes](#bug-fixes)
+  - [Getting Started](#getting-started)
+    - [Installation](#installation)
+    - [Development Commands](#development-commands)
+  - [Deployment](#deployment)
+    - [Building Your Site](#building-your-site)
+    - [Deploying to Vercel](#deploying-to-vercel)
+  - [Project Structure](#project-structure)
+  - [Static Assets and Public Resources](#static-assets-and-public-resources)
+  - [Customization](#customization)
+    - [Editing Component Variables](#editing-component-variables)
+    - [Props in Component Instances](#props-in-component-instances)
+    - [Customizing Navigation and Footer Links](#customizing-navigation-and-footer-links)
       - [Navigation Bar Links](#navigation-bar-links)
       - [Footer Links](#footer-links)
       - [Social Media Links](#social-media-links)
-  * [Integrations and Enhancements](#integrations-and-enhancements)
-  * + [Starlight Documentation](#starlight-documentation)
-    + [Lenis for Smooth Scrolling](#lenis-for-smooth-scrolling)
-    + [GSAP Integration](#gsap-integration)
-    + [Hiding Scrollbar](#hiding-scrollbar)
-    + [SEO Configuration](#seo-configuration)
+  - [Integrations and Enhancements](#integrations-and-enhancements)
+    - [Starlight Documentation](#starlight-documentation)
+    - [Lenis for Smooth Scrolling](#lenis-for-smooth-scrolling)
+    - [GSAP Integration](#gsap-integration)
+    - [Hiding Scrollbar](#hiding-scrollbar)
+    - [SEO Configuration](#seo-configuration)
       - [Customizing Metadata with Meta.astro](#customizing-metadata-with-metaastro)
       - [Applying Metadata in Layouts](#applying-metadata-in-layouts)
       - [Customizing Metadata on Individual Pages](#customizing-metadata-on-individual-pages)
       - [Extending Metadata for SEO](#extending-metadata-for-seo)
       - [Structured Data and Rich Snippets](#structured-data-and-rich-snippets)
       - [Using Astro SEO Integrations](#using-astro-seo-integrations)
-    + [Robots.txt](#robotstxt)
-    + [Astro Integrations](#astro-integrations)
-    + [Flexibility with Integrations](#flexibility-with-integrations)
-  * [Tools and Technologies](#tools-and-technologies)
-    + [Preline UI](#preline-ui)
-    + [Tailwind CSS](#tailwind-css)
-    + [Deployment and Security](#deployment-and-security)
-    + [HTML Minification](#html-minification)
-  * [Contributing](#contributing)
-  * [License](#license)
+    - [Robots.txt](#robotstxt)
+    - [Astro Integrations](#astro-integrations)
+    - [Flexibility with Integrations](#flexibility-with-integrations)
+  - [Tools and Technologies](#tools-and-technologies)
+    - [Preline UI](#preline-ui)
+    - [Tailwind CSS](#tailwind-css)
+    - [Localization](#localization)
+    - [Deployment and Security](#deployment-and-security)
+    - [HTML Minification](#html-minification)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ## Why Choose ScrewFast?
 
@@ -66,7 +72,7 @@ ScrewFast is an open-source template designed for quick and efficient web projec
 ## What's New
 
 ### Added Features
-- [x] **Social Share Component**: 
+- [x] **Social Share Component**:
   - Enables users to share blog posts on social media platforms.
   - Provides easy sharing of a blog post's title and URL.
   - Integrates Clipboard.js for link URL copy functionality.
@@ -75,19 +81,19 @@ ScrewFast is an open-source template designed for quick and efficient web projec
   - Allows users to bookmark blog posts for later reference.
   - Provides a visual indication of whether a post is bookmarked.
   - Utilizes `localStorage` to store bookmarks locally in the browser.
-  - For SSR, replace `localStorage` with cookies to persist bookmarked posts. 
+  - For SSR, replace `localStorage` with cookies to persist bookmarked posts.
     - This setup opens up the possibility for the server to dynamically render content based on user-specific bookmarks, should you choose to implement this feature.
 
 - [x] **Post Feedback Component**:
   - Collects user feedback at the end of each blog post.
   - Serves as a UI demonstration with no live back-end integration.
-  
+
 - [x] Starlight Documentation Theme Integration:
     - A sleek, user-friendly, full-featured documentation theme, which enhances the readability and usability of our documentation.
     - Offers a range of features such as site navigation, built-in search functionality, dark mode, syntax highlighting for code, and improved SEO.
     - Seamlessly integrates internationalization (i18n) to provide support for documentation in multiple languages, catering to a global audience.
     - Designed to facilitate ease of use while offering a modern aesthetic in both light and dark themes to accommodate user preferences.
-      
+
 ### Planned Improvements
 - [ ] Implement a table of contents (ToC) sidebar for blog articles.
 
@@ -132,7 +138,7 @@ This creates a `dist/` directory with your built site (configurable via [outDir 
 
 ### Deploying to Vercel
 
-Click the button below to start deploying your project on Vercel:  
+Click the button below to start deploying your project on Vercel:
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmearashadowfax%2FScrewFast)
 
@@ -149,22 +155,22 @@ src/
 │   ├── ThemeIcon.astro   # Component for toggling light/dark themes
 │   └── ui/               # UI components categorized by functionality
 ├── content/              # Markdown files for blog posts, insights, products, and site configuration
-│   ├── blog/             
-│   ├── insights/         
-│   ├── products/         
+│   ├── blog/
+│   ├── insights/
+│   ├── products/
 │   └── config.ts         # Contains site-wide configuration options
 ├── images/               # Static image assets for use across the website
 ├── layouts/              # Components defining layout templates
 │   └── MainLayout.astro  # The main wrapping layout for all pages
 ├── pages/                # Astro files representing individual pages and website sections
 │   ├── 404.astro         # Custom 404 page
-│   ├── blog/             
-│   ├── contact.astro     
+│   ├── blog/
+│   ├── contact.astro
 │   ├── index.astro       # The landing/home page
-│   ├── insights/         
-│   ├── products/         
+│   ├── insights/
+│   ├── products/
 │   ├── robots.txt.ts     # Dynamically generates robots.txt
-│   └── services.astro    
+│   └── services.astro
 └── utils/                # Shared utility functions and helpers
 
 ```
@@ -187,7 +193,7 @@ public/
 ├── scripts/
 │   └── vendor/
 │       ├── gsap/ # Animations powered by GSAP (GreenSock Animation Platform)
-│       │   └── gsap.min.js 
+│       │   └── gsap.min.js
 │       ├── lenis/ # Lenis script for smooth scrolling effects
 │       │   └── lenis.js
 │       └── preline/   # Preline UI plugins
@@ -336,7 +342,7 @@ With Starlight, you gain access to a wealth of powerful features and integration
 
 > [!NOTE]
 > Dive into the Starlight's comprehensive feature list and learn how it can streamline your development process by visiting the theme's [documentation site](https://starlight.astro.build/).
-> 
+>
 ### Lenis for Smooth Scrolling
 
 Experience buttery smooth scrolling with [Lenis](https://lenis.studiofreight.com/). We've integrated Lenis to provide an enhanced scrolling experience that's both fluid and responsive.
@@ -584,6 +590,38 @@ To ensure consistent code formatting, particularly for class sorting, we have in
   "plugins": ["prettier-plugin-tailwindcss"]
 }
 ```
+### Localization
+
+Astro's internationalization (i18n) features allow you to adapt your project for an international audience. This documentation covers how to use Astro's i18n routing and the astro:i18n virtual module.
+
+Here is a snippet from our HTML minification script in `astro.config.mjs`:
+
+```// astro.config.mjs
+import { defineConfig } from "astro/config"
+
+export default defineConfig({
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "lv", "ee"]
+  }
+})
+```
+
+Organize your content folders with localized content by language. Your folder names must match the locales exactly.
+```
+src
+└─ pages
+   ├─ about.astro
+   ├─ index.astro
+   ├─ es
+   │  ├─ about.astro
+   │  └─ index.astro
+   └─ pt-br
+      ├─ about.astro
+      └─ index.astro
+
+  ```
+>   Note: The localized folders do not need to be at the root of /pages/. Create individual /[locale]/ folders anywhere within src/pages/
 
 ### Deployment and Security
 
@@ -623,12 +661,17 @@ await Promise.all(
 );
 ```
 
+
+
 We encourage you to refer to the detailed documentation for each tool to fully understand their capabilities and how they contribute to the project:
 
 - [Preline UI Documentation](https://preline.co/docs)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Localization Documentation](https://docs.astro.build/en/guides/internationalization)
 - [Vercel Documentation](https://vercel.com/docs)
 - [html-minifier Documentation](https://github.com/kangax/html-minifier)
+- [Localization Documentation](https://docs.astro.build/en/guides/internationalization)
+
 
 ## Contributing
 

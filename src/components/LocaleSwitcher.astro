@@ -1,0 +1,26 @@
+---
+// Correctly import getLocaleByPath and getRelativeLocaleUrlList from astro:i18n
+const currentLocale = Astro.currentLocale;
+
+// Define your supported locales
+const locales = ['en', 'lv'];
+const defaultLocale = "en";
+
+
+function constructLocaleUrl(locale: string) {
+  return locale === defaultLocale ? "/" : `/${locale}`;
+}
+
+const localeUrls = locales.map(locale => [locale, constructLocaleUrl(locale)]);
+---
+
+<select
+  class="bg-transparent pl-1 pt-1 pr-6 pb-1 dark:bg-transparent text-gray-900 dark:text-gray-100 border border-yellow-100/40 dark:border-gray-700 rounded-lg w-18 text-xs cursor-pointer focus:outline-none focus:w-24 transition-all duration-300 ease-in-out"
+  onchange="window.location.href = this.value"
+>
+  {localeUrls.map(([locale, url]) => (
+    <option value={url} selected={locale === currentLocale}>
+      {locale.toUpperCase()}
+    </option>
+  ))}
+</select>
